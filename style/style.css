@@ -1,0 +1,575 @@
+:root {
+    --roxo-escuro: #2a0066;
+    --roxo-claro: #e6e6fa;
+    --fundo-pagina: #f8f6fc;
+    --texto-escuro: #333333;
+    --branco: #ffffff;
+}
+
+body {
+    background-color: var(--fundo-pagina);
+    color: var(--texto-escuro);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- CABEÇALHO & NAVEGAÇÃO --- */
+.cabecalho-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: var(--branco);
+    border-bottom: 2px solid var(--roxo-claro);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+    color: var(--roxo-escuro);
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-custom a {
+    text-decoration: none;
+    color: var(--texto-escuro);
+    margin-left: 25px;
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-custom a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--roxo-escuro);
+    transition: width 0.3s ease;
+}
+
+.nav-custom a:hover, .nav-custom a.ativo {
+    color: var(--roxo-escuro);
+}
+
+.nav-custom a:hover::after, .nav-custom a.ativo::after {
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .cabecalho-custom {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-custom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .nav-custom a {
+        margin-left: 0;
+    }
+}
+
+/* --- SEÇÃO HERO --- */
+.hero-section {
+    background: linear-gradient(135deg, #4b0082, #00008b);
+    color: var(--branco);
+    padding: 60px 0;
+}
+
+.hero-texto h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.hero-texto p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* --- CONTEÚDO (FIGMA STYLE) --- */
+.titulo-secao {
+    color: var(--roxo-escuro);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.linha-decorativa {
+    border-top: 2px solid #ccc;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    opacity: 1;
+}
+
+.texto-conteudo {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* O SEGREDO DAS IMAGENS DO FIGMA */
+.imagem-figma {
+    width: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* --- CARDS DE MARATONAS --- */
+.card-maratona {
+    background-color: var(--roxo-claro);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-maratona:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.card-maratona h4 {
+    color: var(--roxo-escuro);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.card-maratona p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* --- BOTÕES CUSTOMIZADOS --- */
+.btn-outline-custom {
+    display: inline-block;
+    padding: 8px 25px;
+    border: 2px solid var(--roxo-escuro);
+    border-radius: 20px;
+    color: var(--roxo-escuro);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--roxo-escuro);
+    color: var(--branco);
+}
+
+/* --- RODAPÉ --- */
+.rodape-custom {
+    background-color: var(--roxo-claro);
+    padding: 20px;
+    text-align: center;
+    color: var(--roxo-escuro);
+    font-weight: bold;
+}
+
+/* =========================================
+   CONFIGURAÇÕES GERAIS E CORES DO FIGMA
+   ========================================= */
+body {
+    background-color: #f4f0fa; 
+    color: #333333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =========================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #e6e6fa;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+    color: #2a0066;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333333;
+    margin-left: 25px;
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+header nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #2a0066;
+    transition: width 0.3s ease; 
+}
+
+header nav a:hover, header nav a.ativo {
+    color: #2a0066;
+}
+
+header nav a:hover::after, header nav a.ativo::after {
+    width: 100%;
+}
+/* =========================================
+   ESTILOS DE TÍTULOS E LINHAS
+   ========================================= */
+.titulo-secao {
+    color: #2a0066;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.linha-decorativa {
+    border-top: 2px solid #ccc;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    opacity: 1;
+}
+
+.texto-conteudo {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* =========================================
+   COMPONENTES DA EQUIPE (CARDS E AVATARES)
+   ========================================= */
+.membro-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.avatar-placeholder {
+    width: 120px;
+    height: 120px;
+    background-color: #000000;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.avatar-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    color: transparent;
+}
+
+.nome-membro {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.cargo {
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    nav a {
+        margin-left: 0;
+    }
+}
+
+/* =========================================
+   REDES SOCIAIS DOS MEMBROS
+   ========================================= */
+.redes-membro {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    margin-top: 10px;
+}
+
+.redes-membro a {
+    color: #2a0066; 
+    font-size: 18px; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+
+.redes-membro a:hover {
+    color: #6a0dad;
+    transform: translateY(-3px); 
+}
+
+/* =========================================
+   PÁGINA DE PLATAFORMAS (CARDS)
+   ========================================= */
+.plataforma-card {
+    background-color: #e6e6fa;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #dcd0ff;
+}
+
+
+.plataforma-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(42, 0, 102, 0.15);
+}
+
+
+.btn-roxo {
+    background-color: #2a0066;
+    color: #ffffff;
+    font-weight: bold;
+    border: 2px solid #2a0066;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-roxo:hover {
+    background-color: #ffffff;
+    color: #2a0066;
+}
+
+/* =========================================
+   PÁGINA: NOSSO LOG (PLACAR MINIMALISTA)
+   ========================================= */
+
+.log-card {
+    background-color: #e6e6fa;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+}
+
+.log-titulo {
+    color: #2a0066;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.placar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+}
+
+.placar-row {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 5px solid #ccc;
+}
+
+.placar-row:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.placar-ouro { border-left-color: #ffd700; }
+.placar-prata { border-left-color: #c0c0c0; }
+.placar-bronze { border-left-color: #cd7f32; }
+
+.equipe-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.posicao {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    min-width: 60px;
+}
+
+.equipe-detalhes {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-equipe {
+    font-size: 16px;
+    color: #2a0066;
+}
+
+.membros {
+    font-size: 13px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.equipe-score {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.score-balao {
+    color: #333;
+}
+
+.score-penalti {
+    color: #888;
+}
+
+@media (max-width: 576px) {
+    .placar-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .equipe-info {
+        gap: 10px;
+    }
+    
+    .equipe-score {
+        width: 100%;
+        justify-content: flex-end;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+    }
+}
+
+.log-infos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 14px;
+    color: #666666; 
+}
+
+.log-infos span i {
+    color: #2a0066;
+    margin-right: 5px;
+}
+
+/* =========================================
+   ANIMAÇÕES DE TRANSIÇÃO (FADE-IN UP)
+   ========================================= */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animacao-entrada {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.atraso-1 {
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+.atraso-2 {
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
+/* =========================================
+   PAGINAÇÃO (Correção de Alinhamento e Cores)
+   ========================================= */
+.pagination {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+}
+
+.page-item {
+    margin: 0 !important;
+}
+
+.page-link {
+    color: #2a0066; 
+    border: none;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    margin-left: -1px; 
+    transition: all 0.2s ease;
+}
+
+.page-link:hover {
+    color: #4b0082;
+    background-color: #f4f0fa;
+    z-index: 2;
+}
+
+.page-item.active .page-link {
+    background-color: #2a0066;
+    color: white;
+    z-index: 3;
+}
+
+.page-item.disabled .page-link {
+    color: #adb5bd;
+    background-color: #f1f3f5;
+}

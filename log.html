@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Log - PPC UFU-MC</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="assets/ufulogo.png" alt="Logo UFU">
+            <span>UFU-MC | PPC</span>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="log.html" class="ativo">Nosso Log</a>
+            <a href="equipe.html">Equipe</a>
+            <a href="plataformas.html">Plataformas</a>
+        </nav>
+    </header>
+
+    <main class="container py-5 animacao-entrada">
+        
+        <section class="row mb-4 justify-content-center text-center">
+            <div class="col-lg-10">
+                <h1 class="titulo-secao">Nosso Log</h1>
+                <hr class="linha-decorativa mx-auto" style="width: 20%;">
+                <p class="texto-conteudo">A Universidade Federal de Uberlândia (UFU) tem participado ativamente de competições de programação ao longo dos anos. Estudantes dos cursos da UFU formam equipes para competir em eventos regionais e nacionais, colocando em prática habilidades em algoritmos e resolução de problemas. Abaixo possui todas competições em que participamos.</p>
+            </div>
+        </section>
+
+        <section class="row mb-5 align-items-end">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <label for="filtro-tipo" class="form-label small fw-bold mb-1" style="color: #2a0066;">Filtrar por Competição:</label>
+                <select id="filtro-tipo" class="form-select shadow-sm" onchange="aplicarFiltros()">
+                    <option value="todos">Todas as competições</option>
+                    <option value="icpc">ICPC (SBC / Final / Mundial)</option>
+                    <option value="mineira">Maratona Mineira</option>
+                    <option value="cerrado">Maratona do Cerrado</option>
+                    <option value="pizza">Maratona Pizza++</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="filtro-ano" class="form-label small fw-bold mb-1" style="color: #2a0066;">Filtrar por Ano:</label>
+                <select id="filtro-ano" class="form-select shadow-sm" onchange="aplicarFiltros()">
+                    <option value="todos">Todos os Anos</option>
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-12" id="container-maratonas">
+                </div>
+        </section>
+
+        <section class="row mt-4 mb-5">
+            <div class="col-12 d-flex justify-content-center">
+                <nav aria-label="Navegação de páginas do log">
+                    <ul class="pagination" id="paginacao-container">
+                        </ul>
+                </nav>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape-custom">
+        <p class="m-0">@ 2026 UFU-MC | PPC - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/log.js"></script>
+</body>
+</html>
