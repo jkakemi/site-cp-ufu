@@ -71,7 +71,7 @@ const historicoMaratonas = [
         local: "Patrocínio - MG, Brasil",
         qtdEquipes: 880,
         resultados: [
-            { posicaoInterna: "1º", medalha: "🏆", classeCor: "placar-ouro", nome: "Nokia Tijolão", membros: "Guilherme, Júlia, Rhuan", posicaoSede: "3º", posicaoGeral: "264º"},
+            { posicaoInterna: "1º", medalha: "🏆", classeCor: "placar-ouro", nome: "Nokia Tijolão", membros: "Lucas, Júlia, Rhuan", posicaoSede: "3º", posicaoGeral: "264º"},
             { posicaoInterna: "2º", medalha: "🥈", classeCor: "placar-prata", nome: "Linux Skynyrd", membros: "Caio, Igor, Maria", posicaoSede: "8º", posicaoGeral: "395º" },
             { posicaoInterna: "3º", medalha: "🥉", classeCor: "placar-bronze", nome: "No localhost funciona", membros: "João, Leonardo, Leonardo", posicaoSede: "10º", posicaoGeral: "512º" },
             { posicaoInterna: "4º", medalha: "🏅", classeCor: "", nome: "os xadrez", membros: "Carlos, Rafael, Matheus", posicaoSede: "19º", posicaoGeral: "705º" },
